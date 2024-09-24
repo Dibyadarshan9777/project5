@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    image: dibyadarshandevops/project5:v1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
+    restart: always
